@@ -16,6 +16,9 @@
 		C6D94CBD2C8194B0005757DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D94CBC2C8194B0005757DD /* Assets.xcassets */; };
 		C6D94CC02C8194B0005757DD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6D94CBF2C8194B0005757DD /* Preview Assets.xcassets */; };
 		C6D94CCB2C8194B0005757DD /* UI_PresentationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6D94CCA2C8194B0005757DD /* UI_PresentationTests.swift */; };
+		C6F52D572CA9474800F73FC4 /* SearchOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F52D562CA9474800F73FC4 /* SearchOverlay.swift */; };
+		C6F52D592CA9474D00F73FC4 /* SearchHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F52D582CA9474D00F73FC4 /* SearchHandler.swift */; };
+		C6F52D5B2CA9476400F73FC4 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6F52D5A2CA9476400F73FC4 /* MapView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C61F02E52D5DF99E00BF8D6E /* UI_Presentation.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UI_Presentation.entitlements; sourceTree = "<group>"; };
 		C6D94CAB2C8194AF005757DD /* UI_Presentation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UI_Presentation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D94CAF2C8194AF005757DD /* RealityKitContent */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = RealityKitContent; sourceTree = "<group>"; };
 		C6D94CB22C8194AF005757DD /* UI_PresentationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_PresentationApp.swift; sourceTree = "<group>"; };
@@ -41,6 +45,9 @@
 		C6D94CC12C8194B0005757DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C6D94CC62C8194B0005757DD /* UI_PresentationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UI_PresentationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6D94CCA2C8194B0005757DD /* UI_PresentationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_PresentationTests.swift; sourceTree = "<group>"; };
+		C6F52D562CA9474800F73FC4 /* SearchOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchOverlay.swift; sourceTree = "<group>"; };
+		C6F52D582CA9474D00F73FC4 /* SearchHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHandler.swift; sourceTree = "<group>"; };
+		C6F52D5A2CA9476400F73FC4 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +91,15 @@
 		C6D94CAD2C8194AF005757DD /* UI_Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				C61F02E52D5DF99E00BF8D6E /* UI_Presentation.entitlements */,
 				C6D94CB22C8194AF005757DD /* UI_PresentationApp.swift */,
 				C6D94CB42C8194AF005757DD /* ContentView.swift */,
 				C6D94CB62C8194AF005757DD /* AppModel.swift */,
 				C6D94CB82C8194AF005757DD /* ToggleImmersiveSpaceButton.swift */,
+				C6F52D5A2CA9476400F73FC4 /* MapView.swift */,
+				C6F52D582CA9474D00F73FC4 /* SearchHandler.swift */,
 				C6D94CBA2C8194AF005757DD /* ImmersiveView.swift */,
+				C6F52D562CA9474800F73FC4 /* SearchOverlay.swift */,
 				C6D94CBC2C8194B0005757DD /* Assets.xcassets */,
 				C6D94CC12C8194B0005757DD /* Info.plist */,
 				C6D94CBE2C8194B0005757DD /* Preview Content */,
@@ -224,9 +235,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C6D94CB92C8194AF005757DD /* ToggleImmersiveSpaceButton.swift in Sources */,
+				C6F52D5B2CA9476400F73FC4 /* MapView.swift in Sources */,
 				C6D94CB52C8194AF005757DD /* ContentView.swift in Sources */,
 				C6D94CBB2C8194AF005757DD /* ImmersiveView.swift in Sources */,
 				C6D94CB72C8194AF005757DD /* AppModel.swift in Sources */,
+				C6F52D572CA9474800F73FC4 /* SearchOverlay.swift in Sources */,
+				C6F52D592CA9474D00F73FC4 /* SearchHandler.swift in Sources */,
 				C6D94CB32C8194AF005757DD /* UI_PresentationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,9 +388,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UI_Presentation/UI_Presentation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UI_Presentation/Preview Content\"";
+				DEVELOPMENT_TEAM = 267L48NLRM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
@@ -399,9 +415,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UI_Presentation/UI_Presentation.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"UI_Presentation/Preview Content\"";
+				DEVELOPMENT_TEAM = 267L48NLRM;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "$(TARGET_NAME)/Info.plist";
